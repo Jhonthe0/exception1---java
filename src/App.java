@@ -1,4 +1,3 @@
-import java.nio.channels.AcceptPendingException;
 import java.util.Scanner;
 
 import entities.Account;
@@ -30,6 +29,8 @@ public class App {
 
             account.withdraw(amount);
             System.out.println("New balance:" + account.getBalance());
+
+            entrada.close();
         } catch (DomainException e) {
             System.out.println("Withdraw error:" + e.getMessage());
         }
