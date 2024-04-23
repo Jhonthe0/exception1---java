@@ -31,8 +31,8 @@ public class App {
             System.out.println("New balance:" + account.getBalance());
 
             entrada.close();
-        } catch (DomainException e) {
-            System.out.println("Withdraw error:" + e.getMessage());
+        } catch (DomainException exception) {
+            System.out.println("Withdraw error:" + exception.getMessage());
         }
     }
 }
